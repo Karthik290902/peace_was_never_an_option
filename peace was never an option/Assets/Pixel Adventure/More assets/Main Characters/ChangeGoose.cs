@@ -38,30 +38,41 @@ public class ChangeGoose : MonoBehaviour
 
     public void Goose_1()
     {
-        currentGoose = goose_1;
-        GetComponent<Animator>().runtimeAnimatorController = currentGoose;
-        PlayerPrefs.SetInt("gooseIndex", 1);
+        if (PlayerPrefs.GetInt("shopItem_1") == 1 || PlayerPrefs.GetInt("coins") >= 20) {
+            currentGoose = goose_1;
+            GetComponent<Animator>().runtimeAnimatorController = currentGoose;
+            PlayerPrefs.SetInt("gooseIndex", 1);
+        }
     }
 
     public void Goose_2()
     {
-        currentGoose = goose_2;
-        GetComponent<Animator>().runtimeAnimatorController = currentGoose;
-        PlayerPrefs.SetInt("gooseIndex", 2);
-    }
+        if (PlayerPrefs.GetInt("shopItem_2") == 1 || PlayerPrefs.GetInt("coins") >= 50)
+        {
+            currentGoose = goose_2;
+            GetComponent<Animator>().runtimeAnimatorController = currentGoose;
+            PlayerPrefs.SetInt("gooseIndex", 2);
 
+        }
+    }
     public void Goose_3()
     {
-        currentGoose = goose_3;
-        GetComponent<Animator>().runtimeAnimatorController = currentGoose;
-        PlayerPrefs.SetInt("gooseIndex", 3);
+        if (PlayerPrefs.GetInt("shopItem_3") == 1 || PlayerPrefs.GetInt("coins") >= 100)
+        {
+            currentGoose = goose_3;
+            GetComponent<Animator>().runtimeAnimatorController = currentGoose;
+            PlayerPrefs.SetInt("gooseIndex", 3);
+        }
     }
 
     public void Goose_4()
     {
-        currentGoose = goose_4;
-        GetComponent<Animator>().runtimeAnimatorController = currentGoose;
-        PlayerPrefs.SetInt("gooseIndex", 4);
+        if (PlayerPrefs.GetInt("shopItem_4") == 1 || PlayerPrefs.GetInt("coins") >= 0)
+        {
+            currentGoose = goose_4;
+            GetComponent<Animator>().runtimeAnimatorController = currentGoose;
+            PlayerPrefs.SetInt("gooseIndex", 4);
+        }
     }
 
 }
